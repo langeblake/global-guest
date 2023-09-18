@@ -1,5 +1,5 @@
 'use client';
-import React, {useCallback, useState } from 'react'
+import React, {useCallback, useState, useEffect, useRef } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
@@ -13,7 +13,7 @@ interface UserMenuProps {
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({
-    currentUser
+    currentUser 
 }) => {
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
@@ -23,8 +23,35 @@ const UserMenu: React.FC<UserMenuProps> = ({
         setIsOpen((value) => !value);
     }, []);
 
+
+// Created functionality to close the menu with an Outside Click
+    const menuRef = useRef<HTMLDivElement | null>(null);
+
+
+    useEffect(() => {
+        function handleOutsideClick(event: any) {
+            // If there's a menuRef and the target click is not inside of the UserMenu, then close the menu.
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+
+        // If the menu is open, then listen for clicks.
+        if (isOpen) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        }
+
+        // Cleanup the event listener on component unmount or when the menu is closed.
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [isOpen]);
+///
+
+
+
   return (
-    <div className='relative'>
+    <div className='relative' ref={menuRef}>
         <div className='flex flex-row items-center gap-3'>
             <div 
                 onClick={() => {}}
