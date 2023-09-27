@@ -39,7 +39,7 @@ export default function Search() {
                     hidden
                     sm:block
                     text-sm
-                    font-semibold
+                    font-semi-bold
                     px-6
                     border-x-[1px]
                     flex-1
