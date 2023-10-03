@@ -57,15 +57,14 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
                 gap-8
             "
         >
-            {reservations.map((reservation) => (
+            {listings.map((listing) => (
                 <ListingCard 
-                    key={reservation.id}
-                    data={reservation.listing}
-                    reservation={reservation}
-                    actionId={reservation.id}
+                    key={listing.id}
+                    data={listing}
+                    actionId={listing.id}
                     onAction={onCancel}
-                    disabled={deletingId == reservation.id}
-                    actionLabel="Cancel reservation"
+                    disabled={deletingId == listing.id}
+                    actionLabel="Delete property"
                     currentUser={currentUser}
                 />
             ))}
