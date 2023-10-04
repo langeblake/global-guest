@@ -111,7 +111,7 @@ export default function Search() {
                 <div className='hidden sm:block'>{guestLabel}</div>
                 <div className='
                     p-2
-                    bg-rose-500
+                    bg-indigo-500
                     rounded-full
                     text-white
                     '
