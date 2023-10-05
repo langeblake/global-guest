@@ -14,8 +14,8 @@ import getCurrentUser from './actions/getCurrentUser'
 
 
 export const metadata: Metadata = {
-  title: 'Airbnb',
-  description: 'Airbnb Clone',
+  title: 'Global Guest',
+  description: 'Be a guest around the globe',
 }
 
 const font = Nunito({
