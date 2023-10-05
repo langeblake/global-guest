@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import Modal from "./Modal"
-import useRentModal from "@/app/hooks/useRentModal"
+import Modal from "./Modal";
+import useRentModal from "@/app/hooks/useRentModal";
 import Heading from "../Heading";
 import { categories } from "../navbar/Categories";
 import CategoryInput from "../inputs/CategoryInput";
@@ -125,7 +125,7 @@ const RentModal = () => {
 
     let bodyContent = (
         <div className="flex flex-col gap-8">
-            <Heading 
+            <Heading
                 title='Which of these best describes your place?'
                 subtitle='Pick a category'
             />
@@ -141,7 +141,7 @@ const RentModal = () => {
             >
                 {categories.map((item) => (
                     <div key={item.label} className="col-span-1 ">
-                        <CategoryInput 
+                        <CategoryInput
                             onClick={(category) => setCustomValue('category', category)}
                             selected={category === item.label}
                             label={item.label}
