@@ -116,7 +116,8 @@ const LoginModal = () => {
             <div
                 className='
                 text-neutral-500
-                text-suppressContentEditableWarningmt-4
+                text-center
+                mt-4
                 font-light
                 '
             >
