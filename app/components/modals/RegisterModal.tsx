@@ -66,7 +66,7 @@ const RegisterModal = () => {
 
 
     const bodyContent = (
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 overflow-auto'>
             <Heading 
                 title="Welcome to Global Guest" 
                 subtitle="Create an account!"    
