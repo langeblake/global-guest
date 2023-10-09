@@ -21,6 +21,14 @@ Welcome to Global Guest, a contemporary clone inspired by Airbnb. Dive deep into
   - Share your space with travelers from around the world.
   - Create, manage, and optimize your listings for the best guest experience.
 
+  ## Tech Stack 🖥️
+  - React
+  - Next.js
+  - MongoDB
+  - Tailwind CSS
+
+
+
 ---
 
 Happy hosting and traveling with Global Guest! 🏡✈️
