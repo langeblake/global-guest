@@ -31,6 +31,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
             category: label
         }
 
+        // Deselects category and removes from query; toggle
         if (params ?.get('category') === label) {
             delete updatedQuery.category;
         }

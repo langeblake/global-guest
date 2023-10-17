@@ -42,7 +42,7 @@ model Account {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([provider, providerAccountId])
+  @@unique([provider, providerAccountId]) // ensures that there can't be two Account entries with the same provider and provider account ID. For instance, the same Google account ID can't be used to create two different accounts
 }
 
 model Listing {
