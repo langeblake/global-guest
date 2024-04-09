@@ -23,6 +23,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         let currentQuery = {};
 
         if (params) {
+            // Create an object out of params
             currentQuery = qs.parse(params.toString());
         }
 

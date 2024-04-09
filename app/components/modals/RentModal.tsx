@@ -27,6 +27,7 @@ enum STEPS {
     PRICE = 5
 }
 
+//Rent Modal = 'Host your home'
 const RentModal = () => {
     const router = useRouter();
     const rentModal = useRentModal();
@@ -67,6 +68,14 @@ const RentModal = () => {
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
     }), [location]);
+    // 'dynamic' is a utility from Next.js that allows you to dynamically import modules. 
+    // It's particularly useful for conditional or on-demand loading of modules.
+    // This means that the Map component located at ../Map is being dynamically imported. 
+    // The { ssr: false } option tells Next.js not to attempt to render this component on the server during Server-Side Rendering (SSR), 
+    // ensuring it's only imported and rendered on the client side.
+    // This ensures that the dynamic import is only executed again if the [location] value changes. 
+
+
 
     function setCustomValue(id: string, value: any) {
         setValue(id, value, {
@@ -106,6 +115,7 @@ const RentModal = () => {
         })
     }
 
+    // useMemo to avoid unnecessary re-renders
 
     const actionLabel = useMemo(() => {
         if (step === STEPS.PRICE) {

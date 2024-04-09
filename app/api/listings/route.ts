@@ -32,7 +32,7 @@ export async function POST(
             NextResponse.error();
         }
     });
-    ///////
+    /////// No return value
 
 
     const listing = await prisma.listing.create({
