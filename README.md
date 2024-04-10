@@ -1,6 +1,6 @@
 # Global Guest 🌍
 
-Welcome to Global Guest, a contemporary clone inspired by Airbnb. Dive deep into a world where hospitality meets simplicity, and find the perfect space or share your own, no matter where you are.
+Welcome to Global Guest, a contemporary hospitatlity site inspired by Airbnb. Dive deep into a world where hospitality meets simplicity, and find the perfect space or share your own, no matter where you are.
 
 ## Features 🛠
 
