@@ -12,14 +12,18 @@ export default async function getReservations(params: IParams) {
 
     const query: any = {};
 
+    // Find all reservations for a single listing
+    // Used to disable reserved dates on the listing calendar
     if (listingId) {
       query.listing = { id: listingId };
     }
 
+    // Find all the trips a user has for 'My Trips'
     if (userId) {
       query.user = { id: userId };
     }
 
+    // Find all the reservations users made for a host's listings
     if (authorId) {
       query.listing = { userId: authorId };
     }
@@ -34,6 +38,7 @@ export default async function getReservations(params: IParams) {
       },
     });
 
+    // For converting dates to strings
     const safeReservations = reservations.map((reservation) => ({
       ...reservation,
       createdAt: reservation.createdAt.toISOString(),
